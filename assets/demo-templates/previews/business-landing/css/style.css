@@ -1,0 +1,336 @@
+:root {
+    --navy-dark: #0f172a;
+    --navy-blue: #1e3a8a;
+    --navy-light: #2563eb;
+    --bg-light: #f8fafc;
+    --text-navy: #0f172a;
+    --text-muted: #475569;
+    --border: #e2e8f0;
+    --card-bg: #ffffff;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #ffffff;
+    color: var(--text-navy);
+    font-family: var(--font);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Topbar */
+.topbar {
+    background: var(--navy-dark);
+    color: #94a3b8;
+    font-size: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.topbar-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Header */
+.corp-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+}
+.corp-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy-dark);
+}
+.corp-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.corp-nav a:hover { color: var(--navy-blue); }
+.btn-consult {
+    background: var(--navy-blue);
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.btn-consult:hover { background: var(--navy-dark); }
+
+/* Hero */
+.corp-hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 90px 0;
+    border-bottom: 1px solid var(--border);
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+.badge-trust {
+    display: inline-block;
+    padding: 5px 14px;
+    background: #e0e7ff;
+    color: #3730a3;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-left h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+.hero-left p {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+.hero-buttons { display: flex; gap: 14px; }
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-navy {
+    background: var(--navy-blue);
+    color: #ffffff;
+    border: none;
+}
+.btn-navy:hover { background: var(--navy-dark); }
+.btn-outline {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    color: var(--navy-dark);
+}
+.btn-block { width: 100%; justify-content: center; }
+
+.card-metric-highlight {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.highlight-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--navy-blue);
+    margin-bottom: 8px;
+}
+.highlight-stat {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 12px;
+}
+.highlight-bar {
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.highlight-bar .fill {
+    width: 85%;
+    height: 100%;
+    background: var(--navy-blue);
+}
+
+/* Practices */
+.practices-section {
+    padding: 90px 0;
+}
+.section-title-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 54px;
+}
+.section-pre {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--navy-blue);
+    letter-spacing: 1px;
+}
+.section-title-center h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 8px 0 12px;
+}
+.practices-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.practice-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px 24px;
+    transition: transform 0.2s;
+}
+.practice-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+.practice-icon { font-size: 32px; margin-bottom: 16px; }
+.practice-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.practice-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Methodology */
+.methodology-section {
+    background: var(--bg-light);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 90px 0;
+}
+.methodology-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.step-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 20px;
+}
+.step-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background: #e0e7ff;
+    color: #3730a3;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.step-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.step-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Consultation Box */
+.consultation-section {
+    padding: 90px 0;
+}
+.consultation-box {
+    background: var(--navy-dark);
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 56px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+.box-left h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.box-left p {
+    color: #94a3b8;
+    margin-bottom: 24px;
+}
+.consultation-perks {
+    list-style: none;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+.consultation-perks li { margin-bottom: 10px; }
+.consult-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.input-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #cbd5e1;
+}
+.input-field input, .input-field select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Footer */
+.corp-footer {
+    border-top: 1px solid var(--border);
+    padding: 36px 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .hero-grid, .consultation-box { grid-template-columns: 1fr; }
+    .practices-grid, .methodology-steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+    .corp-nav, .topbar { display: none; }
+    .practices-grid, .methodology-steps { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; gap: 12px; }
+}

@@ -1,0 +1,21 @@
+/**
+ * WPCalibrate HTML Bridge - Base frontend styling for preserved static designs.
+ */
+
+.wpcalibrate-preserve-design-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+.wpcalibrate-canvas-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wpcalibrate-canvas-container {
+    width: 100%;
+    min-height: 100vh;
+}
